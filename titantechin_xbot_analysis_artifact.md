@@ -17,7 +17,7 @@ However, the account suffers from a severe algorithmic failure:
 
 > **The 9,000-Post / 30-View Paradox:** Despite publishing **9,125 lifetime posts**, recent posts consistently stall at **20 to 50 views**, **0 likes**, and **0 replies**.
 
-![The 9K Posts / 30 Views Paradox](<img width="1376" height="768" alt="paradox_infographic_1792473009581" src="https://github.com/user-attachments/assets/e92cde64-2ca5-409f-80c7-0582629ce20c" />)
+<img width="1376" height="768" alt="paradox_infographic_1792473009581" src="https://github.com/user-attachments/assets/e92cde64-2ca5-409f-80c7-0582629ce20c" />
 
 By cross-referencing `xbot`'s codebase with the open-source codebase of X's recommendation engine ([`twitter/the-algorithm`](https://github.com/twitter/the-algorithm)), this report identifies the exact mathematical reasons for this stagnation:
 
@@ -41,7 +41,7 @@ Unlike typical promotional crypto bots, `xbot` enforces a **restrained, institut
 
 ### 1.2 Pipeline Architecture
 
-![xbot System Architecture Pipeline](<img width="1376" height="768" alt="xbot_architecture_diagram_1792472986405" src="https://github.com/user-attachments/assets/db8850e4-48f2-44cc-b191-c4fb9e812362" />)
+<img width="1376" height="768" alt="xbot_architecture_diagram_1792472986405" src="https://github.com/user-attachments/assets/db8850e4-48f2-44cc-b191-c4fb9e812362" />
 
 | Stage | Components |
 |---|---|
@@ -118,7 +118,7 @@ The **HeavyRanker** is a Parallel MaskNet neural network scoring each candidate 
 
 $$\text{Final Score} = \sum w_i \cdot P(\text{Action}_i)$$
 
-![X Algorithm HeavyRanker Signal Weights](<img width="1376" height="768" alt="heavyranker_weights_chart_1792472998147" src="https://github.com/user-attachments/assets/e9fc3391-5506-427c-bfaa-4cb3eb52bab0" />)
+<img width="1376" height="768" alt="heavyranker_weights_chart_1792472998147" src="https://github.com/user-attachments/assets/e9fc3391-5506-427c-bfaa-4cb3eb52bab0" />
 
 | Interaction Signal | Weight ($w_i$) | Relative Impact | `xbot` Performance |
 |---|---|---|---|
@@ -179,7 +179,7 @@ In `home-mixer` and `timeline-mixer`, X prevents a single account from dominatin
 
 ## 5. The Algorithmic Engineering Blueprint
 
-![The 5-Pillar Algorithmic Blueprint](<img width="1376" height="768" alt="five_pillar_blueprint_1792473044172" src="https://github.com/user-attachments/assets/d1aa7d95-83aa-4438-bf64-2375e48fc023" />)
+<img width="1376" height="768" alt="five_pillar_blueprint_1792473044172" src="https://github.com/user-attachments/assets/d1aa7d95-83aa-4438-bf64-2375e48fc023" />
 
 ### Pillar 1: Mandatory Visual Layer (+11.0 Dwell Time Boost)
 
@@ -205,7 +205,7 @@ In `home-mixer` and `timeline-mixer`, X prevents a single account from dominatin
 
 **Rationale:** Replies carry **+13.5**; author responses carry **+75.0**.
 
-![Content Transformation: Passive Data to Conversational Hook](<img width="1376" height="768" alt="content_transformation_1792473062472" src="https://github.com/user-attachments/assets/65ece11a-7454-41d6-b9d2-86b47865f6cb" />)
+<img width="1376" height="768" alt="content_transformation_1792473062472" src="https://github.com/user-attachments/assets/65ece11a-7454-41d6-b9d2-86b47865f6cb" />
 
 | Passive Format (0 Replies) | Conversational Hook (+13.5× & +75.0×) |
 |---|---|
