@@ -1,4 +1,4 @@
-# Claude Code Prompt — Apply xbot Algorithm Fixes
+# Claude Code Prompt, Apply xbot Algorithm Fixes
 
 > **Instructions:** Copy everything below this line and paste it as your prompt to Claude Code, run it from the root of `/xbot`.
 
@@ -12,7 +12,7 @@ Your task is to apply the following 5 targeted improvements to the codebase. Rea
 
 ---
 
-## CHANGE 1 — Cashtag Auto-Injection (src/xbot/persona.py)
+## CHANGE 1, Cashtag Auto-Injection (src/xbot/persona.py)
 
 Add the following at the top of `src/xbot/persona.py`, after the existing imports:
 
@@ -44,7 +44,7 @@ Then find the function or method that finalizes tweet text before posting (likel
 
 ---
 
-## CHANGE 2 — Conversational Hook in SYSTEM_PERSONA (src/xbot/persona.py)
+## CHANGE 2, Conversational Hook in SYSTEM_PERSONA (src/xbot/persona.py)
 
 Find the `SYSTEM_PERSONA` string (around lines 85–120). Locate the "substance rules" or "format rules" section.
 
@@ -61,7 +61,7 @@ Add these two rules to that section, preserving all existing rules:
 
 ---
 
-## CHANGE 3 — Active Presence Window (src/xbot/decision/arbiter.py)
+## CHANGE 3, Active Presence Window (src/xbot/decision/arbiter.py)
 
 Read `src/xbot/decision/arbiter.py` fully. 
 
@@ -89,7 +89,7 @@ Wire this check into the post-scheduling logic so that routine posts (non-critic
 
 ---
 
-## CHANGE 4 — Fix Quote-Tweet 403 Error (src/xbot/config.py)
+## CHANGE 4, Fix Quote-Tweet 403 Error (src/xbot/config.py)
 
 Open `src/xbot/config.py`. Find line 249 (approximately) where `comment_approval` is defined.
 
@@ -106,7 +106,7 @@ This prevents the commenter module from automatically firing quote-tweets that t
 
 ---
 
-## CHANGE 5 — Post-Drop Operator Webhook Alert (src/xbot/action/engine.py)
+## CHANGE 5, Post-Drop Operator Webhook Alert (src/xbot/action/engine.py)
 
 Read `src/xbot/action/engine.py` fully. Find the section where a successful tweet post is confirmed (where `tweet_id` or the tweet URL is available after a successful Tweepy API call).
 
@@ -117,7 +117,7 @@ async def _notify_operator_post_live(tweet_id: str, text_preview: str) -> None:
     """Send an operator alert the moment a tweet goes live.
     
     The operator must respond to any early replies within 30 minutes to
-    capture the +75.0 author-reply HeavyRanker multiplier — the single
+    capture the +75.0 author-reply HeavyRanker multiplier, the single
     highest-weighted positive signal in X's recommendation algorithm.
     
     Wire this to Telegram, Discord, or any webhook via OPERATOR_WEBHOOK_URL
@@ -143,7 +143,7 @@ Call this function immediately after a successful post, passing the tweet ID and
 
 ---
 
-## CHANGE 6 — MongoDB Connection Timeout (src/xbot/db/client.py)
+## CHANGE 6, MongoDB Connection Timeout (src/xbot/db/client.py)
 
 Open `src/xbot/db/client.py`. Find the `Database.connect()` method (around line 38).
 
@@ -163,7 +163,7 @@ This prevents the script from hanging for 30+ seconds when run outside the EC2 I
 ## AFTER ALL CHANGES
 
 1. Run `.venv/bin/pytest -v` and confirm all 184 tests pass (2 deprecation warnings for `datetime.utcnow()` are acceptable).
-2. Run a quick import check: `PYTHONPATH=src .venv/bin/python -c "from xbot.persona import inject_cashtags; print(inject_cashtags('BTCUSDT rose to 80000'))"` — expected output: `$BTC rose to 80000`.
+2. Run a quick import check: `PYTHONPATH=src .venv/bin/python -c "from xbot.persona import inject_cashtags; print(inject_cashtags('BTCUSDT rose to 80000'))"`, expected output: `$BTC rose to 80000`.
 3. Report a summary of every file modified and every line changed.
 ```
 ```
