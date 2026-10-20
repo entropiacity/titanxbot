@@ -43,7 +43,7 @@ The **xbot** project is an autonomous cryptocurrency market-intelligence engine 
 
 The account, however, has a severe distribution problem, which this report calls **the 9,125-post / 30-view paradox**. Despite 9,125 lifetime posts, recent posts stall at 20 to 50 views with no likes and no replies. The five posts examined in Section 2 drew 27 to 33 views (mean 30.4).
 
-![Figure 1. Views, likes and replies on the five audited posts, with the account's headline numbers](images/fig01_reach_paradox.png)
+<img width="2600" height="1180" alt="image" src="https://github.com/user-attachments/assets/7a428862-afd2-4934-bb27-3705a58aac41" />
 
 *Figure 1. Views, likes and replies on the five audited posts, with the account's headline numbers.*
 
@@ -82,7 +82,8 @@ Unlike typical promotional crypto bots that rely on hype keywords, emojis and ha
 - **Style:** standard English capitalization and punctuation; no hashtags, emojis, exclamation marks or hype phrases (`lambo`, `moon`, `lfg`, `bullish af`).
 - **Grounding:** every post is anchored in verified data points (exact liquidation notionals, basis points, 24-hour level crossings, funding-rate deltas). Speculative superlatives ("first time ever", "historic record") are prohibited unless they appear in the source data.
 
-![Figure 2. The xbot pipeline: ingestion, decision, generation and action, feeding six content streams](images/fig02_xbot_pipeline.png)
+<img width="2800" height="1360" alt="image" src="https://github.com/user-attachments/assets/b94ffc58-8674-43e1-b9c0-07d16e45a0db" />
+
 
 *Figure 2. The xbot pipeline: ingestion, decision, generation and action, feeding six content streams.*
 
@@ -155,7 +156,9 @@ The historical cadence is continuous automated output covering funding flips, le
 
 The open-sourced recommendation code shows how the For You timeline is built. Two public releases matter here, and the live one is not the one the audit started from.
 
-![Figure 3. The 2023 reference pipeline compared with the live 2026 pipeline](images/fig03_algorithm_pipelines.png)
+<img width="2800" height="1480" alt="image" src="https://github.com/user-attachments/assets/f4d5066d-5354-4d7a-b30d-3ef8e45ce4de" />
+
+
 
 *Figure 3. The 2023 reference pipeline compared with the live 2026 pipeline.*
 
@@ -187,7 +190,8 @@ Final score = Σ weight_i × P(action_i)
 
 **April 2023 snapshot (the audit's reference).**
 
-![Figure 4. HeavyRanker weights from the April 2023 snapshot](images/fig04_weights_2023.png)
+<img width="2600" height="1686" alt="image" src="https://github.com/user-attachments/assets/3d35f413-f74e-42f9-ac6f-50402c0b28f3" />
+
 
 *Figure 4. HeavyRanker weights from the April 2023 snapshot. Multiples are relative to a like (0.5).*
 
@@ -205,7 +209,8 @@ Final score = Σ weight_i × P(action_i)
 
 **October 2026 live defaults.**
 
-![Figure 5. Live weight defaults from xai-org/x-algorithm](images/fig05_weights_2026.png)
+<img width="2600" height="2102" alt="image" src="https://github.com/user-attachments/assets/b62e698d-4a30-42d5-b14f-829470c71405" />
+
 
 *Figure 5. Live weight defaults declared in `home-mixer/params/param.rs` (read October 20, 2026).*
 
@@ -294,7 +299,8 @@ Beyond ranking, the audit of the local repository (`file:///Users/ninja/Download
 
 Five pillars realign xbot with how X's recommendation system rewards content.
 
-![Figure 6. The five-pillar blueprint](images/fig06_blueprint_pillars.png)
+<img width="2800" height="1180" alt="image" src="https://github.com/user-attachments/assets/bf2f2e8b-34de-4961-aac2-66ba74b771a4" />
+
 
 *Figure 6. The five-pillar blueprint: what changes and which behavior each change is meant to move.*
 
@@ -310,7 +316,8 @@ Five pillars realign xbot with how X's recommendation system rewards content.
 - **Rule.** Consolidate routine updates into **three comprehensive daily reports** timed to Binance funding settlements at **00:00, 08:00 and 16:00 UTC**. Each report synthesizes price action, funding-rate drift, open-interest delta and liquidation totals into one visual.
 - **Exception.** Reserve instant posting for **critical outliers**: liquidations above \$25M or major level breaks.
 
-![Figure 7. Shift-report slots on a 24-hour UTC clock against the operator presence window](images/fig07_daily_schedule.png)
+<img width="2800" height="980" alt="image" src="https://github.com/user-attachments/assets/4b440370-58d4-4beb-8475-1a3a59dab32d" />
+
 
 *Figure 7. Shift-report slots on a 24-hour UTC clock against the default operator presence window.*
 
@@ -452,7 +459,8 @@ This assumes a `notify_operator` helper that posts to the chosen webhook.
 
 ## 7. Roadmap and Priority Matrix
 
-![Figure 8. Roadmap and priority matrix](images/fig08_roadmap_matrix.png)
+<img width="2840" height="1380" alt="image" src="https://github.com/user-attachments/assets/bfa6932a-f1de-4b9a-898b-999584eae6c6" />
+
 
 *Figure 8. Eight milestones across four phases.*
 
